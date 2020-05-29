@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<!-- Solve the following task using only the jQuery library (production version, jquery.min.js, or developement version, jquery.js); YOU ARE NOT ALLOWED TO USE ANY OTHER JS LIBRARY, PLUGIN OR EXTENSION BESIDES THE JQUERY LIBRARY. Write a web page which contains a button and if the user clicks that button, a dialog window (like the one from http://jqueryui.com/dialog/) will be displayed. That dialog window should display various information. The user should be able to move the window around in the browser window and also he/she can close the window by clicking on the 'x' icon. The dialog window does not need to be resizable. -->
+
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title> Laborator 6 </title>
+
+	<script src = "jquery-3.5.0.min.js"></script>
+	<script src = "script.js"></script>
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	
+<!-- The button -->
+<div id = "wrapper">
+	<button class = "button">
+		Do not click me
+	</button>
+</div>
+
+<!-- The dialog -->
+<div id="myDialog" class="dialog">
+	<!-- Dialog content -->
+	<div class="dialog-content">
+		<div class="dialog-header">
+			<!-- In the header we must have an X item that allow us to close the dialog -->
+			<span class="close">&times;</span>
+      		<h2>I have warned you</h2>
+    	</div>
+
+    	<div class="dialog-body">
+    		<!-- This is the actual content of the dialog -->
+      		<p>It seems that you are a little rebel.</p>
+      		<p>Don't worry, I can't do much.</p>
+      		<p>You can move me around in the browser window or close me. That's all.</p>
+    	</div>
+  	</div>
+</div>
+
+</body>  
+</html>

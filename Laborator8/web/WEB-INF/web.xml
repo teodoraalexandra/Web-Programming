@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>mvcIntelliJIdea.controller.LoginController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/LoginController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutController</servlet-name>
+        <servlet-class>mvcIntelliJIdea.controller.LogoutController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LogoutController</servlet-name>
+        <url-pattern>/LogoutController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CheckController</servlet-name>
+        <servlet-class>mvcIntelliJIdea.controller.CheckController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CheckController</servlet-name>
+        <url-pattern>/CheckController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GameController</servlet-name>
+        <servlet-class>mvcIntelliJIdea.controller.GameController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GameController</servlet-name>
+        <url-pattern>/GameController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WinnerController</servlet-name>
+        <servlet-class>mvcIntelliJIdea.controller.WinnerController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>WinnerController</servlet-name>
+        <url-pattern>/WinnerController</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DisplayImage</servlet-name>
+        <servlet-class>mvcIntelliJIdea.images.DisplayImage</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DisplayImage</servlet-name>
+        <url-pattern>/images/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,140 @@
+﻿@model Laborator9.ViewModel
+
+@{
+    Layout = null;
+    if (Session["userId"] == null)
+    {
+        Response.Redirect("~/Login/Index");
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce</title>
+    <style>
+        body {
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            background: #3498db;
+            margin: 0 auto 0 auto;
+            width: 100%;
+            text-align: center;
+            margin: 20px 0px 20px 0px;
+        }
+
+        #welcome {
+            font-size:3em;
+        }
+
+        #confirmation {
+            font-size: 1em;
+        }
+
+        #product_code {
+            width: 125px;
+            border-radius: 4px;
+            font-weight: 800;
+        }
+
+        .button {
+            background: #2ecc71;
+            width: 125px;
+            color: white;
+            border-radius: 4px;
+            border: #27ae60 1px solid;
+        }
+
+        .box {
+            background: white;
+            width: 250px;
+            border-radius: 6px;
+            margin: 0 auto 0 auto;
+            padding: 10px 5px 10px 5px;
+            border: #2980b9 4px solid;
+        }
+
+        .pagination a {
+            color: black;
+            padding: 8px 16px;
+            margin-top: 20px;
+            text-decoration: none;
+            transition: background-color .3s;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+  
+    </style>
+
+    <script src="~/Scripts/jquery-3.5.1.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#filter").click(function () {
+                $.get("/Home/GetProductsFromCat", { product_code: $("#product_code").val() },
+                    function (data, status) {
+                        $("#maindiv").html(data);
+                        $("#maindiv").addClass("box");
+                    });
+            });
+        });
+
+    </script>
+
+
+</head>
+<body>
+    <div>
+        <h1 id="welcome">Welcome back, @Session["userName"]</h1>
+        <h6 id="confirmation">@TempData["status"]</h6>
+    </div>
+
+    Enter desired category: <input type="text" id="product_code" />
+    <input class="button" id="filter" type="button" value="Get filtered products" />
+    <button class="button" onClick="window.location.reload();">Get all products</button>
+    <br />
+    <br />
+    <br />
+    <div id="maindiv">
+        <b class="box"> &nbsp&nbsp&nbsp&nbsp&nbspName&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPrice&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspCode&nbsp&nbsp&nbsp&nbsp&nbsp </b>
+        <br />
+        <br />
+
+        @foreach (var product in Model.PaginatedProducts())
+        {
+            <div class="box">
+                <form action="/Home/AddProductToCart" method="GET">
+
+                    <input type="hidden" value="@product.Name" name="product_name" />@product.Name&nbsp;&nbsp;&nbsp;
+                    <input type="hidden" value="@product.Price" name="product_price" />@product.Price&nbsp;&nbsp;&nbsp;
+                    <input type="hidden" value="@product.Code" name="product_code" />@product.Code&nbsp;&nbsp;
+
+                    <input class="button" type="submit" value="Add product" />
+                </form>
+            </div>
+        }
+
+        <br />
+        <br />
+
+        <div class="pagination">
+            @for (int i = 1; i <= Model.PageCount(); i++)
+            {
+                <a href="@Url.Action("Index", new { page = i })">@i</a>
+            }
+        </div>
+
+    </div>
+
+    <br />
+    <br />
+
+    <a style="text-decoration: none" class="button" href="@Url.Action("LogOut", "Login")">Logout</a>
+    <a style="text-decoration:none" class="button" href="@Url.Action("GoToCart", "Home")">Go to cart</a>
+
+    <br />
+
+</body>
+</html> 
+

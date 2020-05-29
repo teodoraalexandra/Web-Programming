@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Problema 2</title>
+	<style type="text/css">
+		.first {
+			height: 400px;
+			width: 400px;
+			background-color: CRIMSON;
+			border-radius: 200px;
+
+			position: absolute;
+  			left: 35%;
+  			top: 20%;
+  			z-index: -3;
+		}
+
+		.second {
+			height: 300px;
+			width: 300px;
+			background-color: DARKORANGE;
+			border-radius: 200px;
+
+			position: absolute;
+  			left: 39%;
+  			top: 27%;
+  			z-index: -2;
+		}
+
+		.third {
+			height: 200px;
+			width: 200px;
+			background-color: GOLD;
+			border-radius: 200px;
+			
+			position: absolute;
+  			left: 43%;
+  			top: 34%;
+  			z-index: -1;
+		}
+
+		.forth {
+			height: 100px;
+			width: 100px;
+			background-color: MEDIUMSPRINGGREEN;
+			border-radius: 200px;
+
+			position: absolute;
+  			left: 47%;
+  			top: 41%;
+  			z-index: 0;
+		}
+
+		.forth:hover ~ .first {
+    		background-color: LIGHTGREEN;
+    		border-radius: 0px;
+		}
+
+		.forth:hover ~ .second {
+    		background-color: MEDIUMSEAGREEN;
+    		border-radius: 0px;
+		}
+
+		.forth:hover ~ .third {
+    		background-color: GREEN;
+    		border-radius: 0px;
+		}
+
+		.forth:hover {
+    		background-color: DARKGREEN;
+    		border-radius: 0px;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<!-- Write a web page which contains 4 divs one inside each other (the first div contains inside it all the other 3 divs, the second div contains inside 2 divs, and the third div contains the smallest div inside it). Each div is colored (background color) with different colors. When the mouse is over the inner div (i.e. the smallest one), all divs should change their colors.-->
+
+	<div class = "forth"></div>
+	<div class = "third"></div>
+	<div class = "second"></div>
+	<div class = "first"></div>
+				
+</body>
+</html>
