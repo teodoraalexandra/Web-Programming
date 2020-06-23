@@ -15,8 +15,10 @@ In this application, user must be able to:
 - filter students based on their names
 
 --------------------------------------------------------------------------
-Obs: The server-side technology (PHP or JSP or ASP.NET) is not at your
-choice, it will be fixed by the exam subject. However, you can change
-this technology to another one of your preference, but in this case
-the final grade that you receive will be cut at 6 (i.e. the maximum
-grade that you can get for this practical exam is 6).
+Obs: Non-functional requirements:
+- add different validation logic for input fields
+- do not force the user to input an ID for an item if he wants to delete/edit/insert it; 
+this should happen automatically (e.g. the user clicks an item from a list, 
+and a page/modal prepopulated with the data for that particular item is opened, where the user can edit it)
+- add confirmation when the user deletes/cancels an item
+- do a bare minimum CSS that at least aligns the various input fields
