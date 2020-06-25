@@ -1,0 +1,44 @@
+﻿<Properties StartupConfiguration="{943040DF-4BD1-462E-8138-980802B0E211}|">
+  <MonoDevelop.Ide.ItemProperties.ExamTemplateAsp PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Laborator9/Controllers/AddController.cs">
+    <Files>
+      <File FileName="Laborator9/Models/Post.cs" Line="21" Column="1" />
+      <File FileName="Laborator9/Models/Topic.cs" Line="10" Column="1" />
+      <File FileName="Laborator9/Views/Login/Index.cshtml" Line="72" Column="17" />
+      <File FileName="Laborator9/App_Start/RouteConfig.cs" />
+      <File FileName="Laborator9/Views/Add/Index.cshtml" Line="75" Column="1" />
+      <File FileName="Laborator9/Controllers/LoginController.cs" Line="73" Column="1" />
+      <File FileName="Laborator9/Views/Home/Index.cshtml" />
+      <File FileName="Laborator9/Controllers/AddController.cs" Line="38" Column="14" />
+      <File FileName="Laborator9/Controllers/HomeController.cs" Line="89" Column="39" />
+      <File FileName="Laborator9/ViewModel.cs" Line="28" Column="12" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ExamTemplateAsp" expanded="True">
+            <Node name="ExamTemplateAsp" expanded="True">
+              <Node name="App_Start" expanded="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="AddController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Add" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Login" expanded="True" />
+              </Node>
+              <Node name="Global.asax" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
